@@ -222,23 +222,57 @@
 
 //                                                                        Clases
 
-class Personas{
-    var nombre: String = " "
-    var edad: Int = 0
-    
-    init(name: String, age: Int) {
-        self.nombre = name
-        self.edad = age
-    }
-    
-    func saludo () -> String {
-        return "Hola desde la clase"
-    }
-}
+//class Personas{
+//    var nombre: String = " "
+//    var edad: Int = 0
+//
+//    init(name: String, age: Int) {
+//        self.nombre = name
+//        self.edad = age
+//    }
+//
+//    func saludo () -> String {
+//        return "Hola desde la clase"
+//    }
+//}
+//
+//
+//let persona = Personas(name: "Jonh", age: 33)
+//print(persona.nombre)
+//let persona2 = Personas(name: "Javier", age: 32)
+//print(persona2.nombre)
+//print(persona.saludo())
 
 
-let persona = Personas(name: "Jonh", age: 33)
-print(persona.nombre)
-let persona2 = Personas(name: "Javier", age: 32)
-print(persona2.nombre)
-print(persona.saludo())
+
+//                                                            Novedades de Swift 5
+
+
+//raw strings
+
+//let mensaje = #"Este es un mensaje con "comillas" en las raw strings"#
+//print(mensaje)
+//
+//let saludo = "Hola como estas"
+//let mensaje2 = #" \#(saludo) jonh alias el "Bambam" "#
+//print(mensaje2)
+//
+//isMultiple
+
+//let numero = 68
+//
+//if numero.isMultiple(of: 3) {
+//    print("Es multiple")
+//} else {
+//    print("No es multiple")
+//}
+
+// compactMapValues  (eliminar datos de un array que no nos sirvan)
+
+//let edades = ["Pedro": "20", "Luis" : "treinta", "Carolina" : "25"]
+//let edadesFiltro = edades.compactMapValues{Int($0)}
+//print(edadesFiltro)
+
+let corredores = ["Luis": 60, "Roberto": 50, "Maria": 45, "Mario" : nil]
+let corredoresFilter = corredores.compactMapValues{$0}
+print(corredoresFilter)
